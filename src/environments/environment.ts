@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false
+  base_url:"https://api.github.com/search/users",
+  base_repo_url: "https://api.github.com/search/repositories?q=",
+  access_token: "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"
 };
 
 /*
