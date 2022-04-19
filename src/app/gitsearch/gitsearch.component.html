@@ -7,7 +7,7 @@
        <div class="col-md-6">
            <div>
             <h2>Profile</h2>
-            <img [src]="src/assets/bg1.webp" alt=img>
+            <!-- <img [src]="src/assets/bg1.webp" alt=img> -->
            </div>
         <div>
             <h2>Repositories</h2>
@@ -20,7 +20,18 @@
        </div>
        <div class="col-md-6">
         <h2>Search Repository</h2>
-           <app-gitsearch-form></app-gitsearch-form>
+           <!-- <app-gitsearch-form></app-gitsearch-form> -->
+           <!-- <form> -->
+            <div class="form-group">
+                <label class="username">username</label>
+                <input type="text" class="form-control" #userInput>
+            </div><br>
+            <button  class="btn text-light" (click)="getUsers(userInput.value)">Search User</button>
+            <button class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button>
+        <!-- </form> -->
+
+        <app-gitsearch-details></app-gitsearch-details>
+        
        </div>
    </div>
 </div>

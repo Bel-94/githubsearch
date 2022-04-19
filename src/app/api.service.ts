@@ -25,7 +25,6 @@ export class ApiService {
     let promise=new Promise<void>((resolve,reject)=>{
       this.http.get<any[]>(`${environment.BASE_URL}${userName}`,this.httpOptions).subscribe({
         next:(res:any)=>{
-        console.log(res.items)
         this.users=res.items
         resolve()
       },
@@ -44,8 +43,7 @@ export class ApiService {
     let promise=new Promise<void>((resolve,reject)=>{
       this.http.get<any[]>(`${environment.base_repo_url}${repoName}`,this.httpOptions).subscribe({
         next:(res:any)=>{
-        console.log(res)
-        this.repos=res
+        this.repos=res.items
         resolve()
       },
       error:(err:any)=>{

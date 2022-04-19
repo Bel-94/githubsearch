@@ -2,8 +2,8 @@
 <form>
     <div class="form-group">
         <label class="username">username</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" #userInput>
     </div><br>
-    <button type="submit" class="btn text-light">Search User</button>
-    <button type="submit" class="btn text-light">Search Repo</button>
+    <button type="submit" class="btn text-light" (click)="getUsers(userInput.value)">Search User</button>
+    <button type="submit" class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button>
 </form>
