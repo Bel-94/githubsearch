@@ -16,7 +16,7 @@ export class GitsearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsers("Sam")
-    this.getRepos("https://github.com/Bel-94/quotes")
+    this.getRepos("delani studio")
   }
 
   getUsers(userName:string){

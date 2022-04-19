@@ -5,18 +5,22 @@
 <div class="container">
    <div class="row">
        <div class="col-md-6">
-        <h2>Profile</h2>
-        <img src="src/assets/profile.webp" >
+           <div>
+            <h2>Profile</h2>
+            <img [src]="src/assets/bg1.webp" alt=img>
+           </div>
+        <div>
+            <h2>Repositories</h2>
+           <p><a class="btn text-light" href="https://bel-94.github.io/akan-web-application/">Akan-Web-App</a></p>
+           <p><a class="btn text-light" href="https://bel-94.github.io/Delani-Studio-IP3/">Delani-Studio</a></p>
+           <p><a class="btn text-light" href="https://bel-94.github.io/Pizza-IP4/">Pizza-Best</a></p>
+           <p><a class="btn text-light" href="https://bel-94.github.io/bel-first-project/">Portfolio</a></p>
+           <p><a class="btn text-light" href="https://bel-94.github.io/quotes/">Bel-Quotes</a></p>
+        </div>
        </div>
        <div class="col-md-6">
-           <h2>Repositories</h2>
-           <p><a class="btn btn-success" href="https://bel-94.github.io/akan-web-application/">Akan-Web-App</a></p>
-           <p><a class="btn btn-success" href="https://bel-94.github.io/Delani-Studio-IP3/">Delani-Studio</a></p>
-           <p><a class="btn btn-success" href="https://bel-94.github.io/Pizza-IP4/">Pizza-Best</a></p>
-           <p><a class="btn btn-success" href="https://bel-94.github.io/bel-first-project/">Portfolio</a></p>
-           <a class="btn btn-success" href="https://bel-94.github.io/quotes/">Bel-Quotes</a>
-        <!-- <h2>Search Repository</h2> -->
-           <!-- <app-gitsearch-form></app-gitsearch-form> -->
+        <h2>Search Repository</h2>
+           <app-gitsearch-form></app-gitsearch-form>
        </div>
    </div>
 </div>
