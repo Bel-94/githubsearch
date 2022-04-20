@@ -1,13 +1,37 @@
 <div class="container">
     <h1>GitHub Search</h1>
 </div>
+<div class="form">
+    <div class="row">
+        <div class="col-md-4">
+            <app-gitsearch-form></app-gitsearch-form>
+        </div>
+    </div>
+</div>
 <app-search></app-search>
 <div class="container">
-   <div class="row">
-       <div class="col-md-6">
-           <div>
+    <div>
+        <!-- <h2>{{user.login}}</h2> -->
+    </div>
+     <div class="row">
+         <div class="col-md-8">
+             <!-- <img src="{{user.avatar_url}}" alt="img"> -->
+         </div>
+     
+        
+          
+
+
+
+
+
+
+
+
+
+           <!-- <div>
             <h2>Profile</h2>
-            <!-- <img [src]="src/assets/bg1.webp" alt=img> -->
+            <img [src]="src/assets/bg1.webp" alt=img>
            </div>
         <div>
             <h2>Repositories</h2>
@@ -16,18 +40,17 @@
            <p><a class="btn text-light" href="https://bel-94.github.io/Pizza-IP4/">Pizza-Best</a></p>
            <p><a class="btn text-light" href="https://bel-94.github.io/bel-first-project/">Portfolio</a></p>
            <p><a class="btn text-light" href="https://bel-94.github.io/quotes/">Bel-Quotes</a></p>
-        </div>
-       </div>
-       <div class="col-md-6">
-        <h2>Search Repository</h2>
+        </div> -->
+       <div class="col-md-4">
+        <!-- <h2>Search Repository</h2> -->
            <!-- <app-gitsearch-form></app-gitsearch-form> -->
            <!-- <form> -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="username">username</label>
                 <input type="text" class="form-control" #userInput>
             </div><br>
             <button  class="btn text-light" (click)="getUsers(userInput.value)">Search User</button>
-            <button class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button>
+            <button class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button> -->
         <!-- </form> -->
 
         <app-gitsearch-details></app-gitsearch-details>
