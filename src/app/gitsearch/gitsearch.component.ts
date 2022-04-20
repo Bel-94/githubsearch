@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService} from '../api.service'
+import { User } from '../user';
+import { Repository } from '../repository';
 
 @Component({
   selector: 'app-gitsearch',
@@ -7,6 +9,14 @@ import { ApiService} from '../api.service'
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
+
+  users:User[]=[
+    new User: (name:"Bel-94", id: 100135405, followers:3, following: 9, bio:"", public_repos: 18, location: "", date:new Date, _avatar_url:"https://avatars.githubusercontent.com/u/100135405?v=4")
+  ]
+
+  repos:Repository[]=[
+
+  ]
 
   constructor(private apiSearch:ApiService) { }
 
