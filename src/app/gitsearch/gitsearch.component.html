@@ -4,53 +4,55 @@
 <div class="form">
     <div class="row">
         <div class="col-md-4">
-            <app-gitsearch-form></app-gitsearch-form>
+            <!-- <app-gitsearch-form></app-gitsearch-form> -->
         </div>
     </div>
 </div>
 <app-search></app-search>
 <div class="container">
     <div>
-        <!-- <h2>{{user.login}}</h2> -->
+        <h2>{{user.login}}</h2>
     </div>
-     <div class="row">
-         <div class="col-md-8">
-             <!-- <img src="{{user.avatar_url}}" alt="img"> -->
+    <div class="row">
+         <div class="col-md-8" *ngIf="isRepoEmpty">
+             <img src="{{user.avatar_url}}" alt="img">
+             <div class="user-details">
+                <p>followers: {{user.followers}}</p>
+                <p>following: {{user.following}}</p>
+                <p>Repositories: {{user.public_repos}}</p>
+                <a href="{{user.html_url}}" target="blank">View Profile</a><br><br>
+                <a href="https://github.com/{{user.login}}?tab=repositories" target="blank">View Repositories</a>
+             </div>
+
+         </div>
+         <div class="col-md-8" *ngIf="!isRepoEmpty">
+            <div *ngFor="let repo of repoArray" >
+                    <img src="../../assets/folder.png">
+                    <div class="repo-details">
+                        <p>Name: {{repo.name}}</p>
+                        <p>Description: {{repo.description}}</p>
+                        <p>Created-at: {{repo.created_at|dateCount}}</p>
+                        <p>Language: {{repo.language}}</p>
+                        <a href="{{repo.html_url}}" target="blank">View Repository</a>
+                    </div>
+                
+                
+
+            </div>
          </div>
      
-        
-          
-
-
-
-
-
-
-
-
-
-           <!-- <div>
-            <h2>Profile</h2>
-            <img [src]="src/assets/bg1.webp" alt=img>
-           </div>
-        <div>
-            <h2>Repositories</h2>
-           <p><a class="btn text-light" href="https://bel-94.github.io/akan-web-application/">Akan-Web-App</a></p>
-           <p><a class="btn text-light" href="https://bel-94.github.io/Delani-Studio-IP3/">Delani-Studio</a></p>
-           <p><a class="btn text-light" href="https://bel-94.github.io/Pizza-IP4/">Pizza-Best</a></p>
-           <p><a class="btn text-light" href="https://bel-94.github.io/bel-first-project/">Portfolio</a></p>
-           <p><a class="btn text-light" href="https://bel-94.github.io/quotes/">Bel-Quotes</a></p>
-        </div> -->
+           
+    
        <div class="col-md-4">
         <!-- <h2>Search Repository</h2> -->
            <!-- <app-gitsearch-form></app-gitsearch-form> -->
            <!-- <form> -->
-            <!-- <div class="form-group">
+             <div class="form-group">
                 <label class="username">username</label>
                 <input type="text" class="form-control" #userInput>
             </div><br>
-            <button  class="btn text-light" (click)="getUsers(userInput.value)">Search User</button>
-            <button class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button> -->
+            <button  class="btn text-light" (click)="getUser(userInput.value)">Search User</button>
+            <button class="btn text-light" (click)="getRepos(userInput.value)">Search Repo</button> 
         <!-- </form> -->
 
         <app-gitsearch-details></app-gitsearch-details>

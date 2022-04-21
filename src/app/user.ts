@@ -1,12 +1,7 @@
 export class User {
-    login:string;
-    id:number;
-    followers:number;
 
-    constructor(login:string, id:number, followers:number, following:number, bio:string, public_repos:number,  location:string, date:Date, avatar_url:string) {
+
+    constructor(public login:string, public followers:number, public following:number, public public_repos:number, public created_at:Date, public avatar_url:string, public html_url:string) {
     
-        this.login = login
-        this.id = id
-        this.followers = followers
     }
 }

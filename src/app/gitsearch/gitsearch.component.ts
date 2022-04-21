@@ -17,11 +17,29 @@ export class GitsearchComponent implements OnInit {
   userArray!:any[]
   repoArray!:any[]
 
+  isRepoEmpty:boolean=true
+
+  user!:User
+  repo!:any
+
 
 
   ngOnInit(): void {
     // this.getUsers("Sam")
     // this.getRepos("delani studio")
+    this.getUser("Bel-94")
+  }
+
+  getUser(singleUser:string){
+    this.apiSearch.getUser(singleUser).then(
+      (success)=>{
+        this.user=this.apiSearch.user
+        console.log(this.user.login)
+      },
+      (error)=>{
+        alert("User Not Found")
+      }
+    )
   }
 
   getUsers(userName:string){
@@ -40,6 +58,7 @@ export class GitsearchComponent implements OnInit {
     this.apiSearch.getRepos(repoName).then(
       (success)=>{
         this.repoArray=this.apiSearch.repos
+        this.isRepoEmpty=false
         console.log(this.repoArray)
       },
       (error)=>{
