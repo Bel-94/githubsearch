@@ -20,7 +20,7 @@ export class ApiService {
 
   httpOptions={
     headers:new HttpHeaders({
-      Authorization:`token ${environment.access_token}`
+      Authorization:`token ${atob(environment.access_token)}`
     })
   }
 
